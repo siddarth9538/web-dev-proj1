@@ -1,0 +1,267 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/originals/10/28/f9/1028f99fd8f021b7b30e6e1899a88b29.gif');
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 250px; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Container Styling */
+.container {
+    background: #7a7a7a;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 450px;
+    text-align: center;
+    opacity: 0.8;
+    margin: 10px;
+    transition: opacity 0.3s ease;
+  
+}
+.container2{
+ 
+   display: flex;
+   flex-direction: row;
+}
+.text{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.text2{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: left;
+}
+/* Title */
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fdfdfd;
+    margin-bottom: 15px;
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Add Task Button */
+button {
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.task-table-container {
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.task-table th, .task-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.task-table th {
+    background: #8b949d;
+    color: white;
+    opacity: 0.8;
+}
+
+.task-table td {
+    font-size: 14px;
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+
+}
+
+/* Task Buttons */
+.task-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.complete-btn, .delete-btn {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.complete-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+}
+
+.complete-btn:hover {
+    background: #218838;
+}
+
+.delete-btn {
+    background: #ff5252;
+    color: white;
+    border: none;
+}
+
+.delete-btn:hover {
+    background: #d32f2f;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 10px;
+        padding-bottom: 150px; /* Reduce padding for smaller screens */
+    }
+
+    .container {
+        width: 90%; /* Make the container take up 90% of the screen width */
+        max-width: 100%; /* Remove the fixed max-width */
+        min-width: auto; /* Allow the container to shrink */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+
+    input {
+        font-size: 14px; /* Reduce font size for input fields */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Reduce font size for buttons */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .task-item {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .task-title {
+        font-size: 14px; /* Reduce font size for task titles */
+    }
+
+    .task-desc {
+        font-size: 12px; /* Reduce font size for task descriptions */
+    }
+
+    .complete-btn, .delete-btn {
+        font-size: 12px; /* Reduce font size for buttons */
+        padding: 6px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-bottom: 100px; /* Further reduce padding for very small screens */
+    }
+
+    .container {
+        width: 95%; /* Make the container take up 95% of the screen width */
+        padding: 15px; /* Further adjust padding for very small screens */
+    }
+
+    h1 {
+        font-size: 18px; /* Further reduce font size for very small screens */
+    }
+
+    input {
+        font-size: 12px; /* Further reduce font size for input fields */
+        padding: 8px; /* Further adjust padding for very small screens */
+    }
+
+    button {
+        font-size: 12px; /* Further reduce font size for buttons */
+        padding: 8px; /* Further adjust padding for very small screens */
+    }
+
+    .task-item {
+        padding: 8px; /* Further adjust padding for very small screens */
+    }
+
+    .task-title {
+        font-size: 12px; /* Further reduce font size for task titles */
+    }
+
+    .task-desc {
+        font-size: 10px; /* Further reduce font size for task descriptions */
+    }
+
+    .complete-btn, .delete-btn {
+        font-size: 10px; /* Further reduce font size for buttons */
+        padding: 5px; /* Further adjust padding for very small screens */
+    }
+}
